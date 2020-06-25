@@ -35,7 +35,7 @@ will generate (`remoteId.d.ts`):
 ```ts
 export const enum RemoteId {
     A = "<random guid A>",
-	B = "<random guid B>"
+	B = "<random guid B>",
 	C = "<random guid C>"
 }
 ```
