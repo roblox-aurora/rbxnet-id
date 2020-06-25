@@ -4,13 +4,12 @@ import { StatementStructures, StructureKind, EnumMemberStructure, Project } from
 import path from "path";
 import {v4 as uuidv4 } from "uuid";
 import yargs from "yargs";
-import crypto from "crypto";
 
 const cli = yargs
 	.option("type", {
 		alias: "o",
 		describe: "Output Type",
-		choices: ["uuid", "text", "sha1", "md5"],
+		choices: ["uuid", "text"],
 		default: "uuid"
 	}).option("name", {
 		alias: "n",
@@ -40,10 +39,6 @@ function isRemoteIdProjectFile(data: {}): data is RemoteIdFile {
 function generateNameForKey(key: string, type: string) {
 	if (type === "uuid") {
 		return uuidv4(); 
-	} else if (type === "sha1" || type === "md5") {
-		const shasum = crypto.createHash(type);
-		shasum.update(key);
-		return shasum.digest('hex').toString();
 	} else {
 		return key;
 	}
