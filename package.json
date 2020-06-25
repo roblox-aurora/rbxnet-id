@@ -1,0 +1,27 @@
+{
+  "name": "rbx-net-idgen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node out/cli.js"
+  },
+  "bin": {
+    "rbxnid": "out/cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "ts-morph": "^7.1.2",
+    "uuid": "^8.2.0",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.1",
+    "@types/uuid": "^8.0.0",
+    "@types/yargs": "^15.0.5"
+  }
+}
