@@ -1,8 +1,8 @@
 {
-  "name": "rbx-net-idgen",
+  "name": "roblox-ts-net-idgen",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Remote Id generator for @rbxts/net",
+  "main": "out/index.js",
   "scripts": {
     "build": "tsc",
     "test": "tsc && node out/cli.js"
